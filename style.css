@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.fa-arrow-up{
+    position: fixed;
+    color: white;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 14px;
+    bottom: 0;
+    right: 0;
+    margin-right: 40px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+.navigation{
+    background-color: black;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid white;
+}
+.logo img{
+    width: 400px;
+    
+}
+.nav{
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  list-style: none;
+  border-bottom: 1px solid white;
+}
+.nav a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav li{
+    padding: 10px;
+}
+.nav li:hover{
+    background-color: rgb(163, 163, 163);
+}
+.cart span{
+    padding-left: 5px;
+}
+.cart .fas{
+    padding-right: 5px;
+}
+
+
+/*this is for the main*/
+.big-container{
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+}
+
+/*quick pick*/
+.quick-pick{
+    height: 700px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+.para{
+    cursor: pointer;
+    animation-name: color;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes color{
+    from {color: rgb(199, 199, 199);}
+    to {color: rgb(0, 0, 0);}
+}
+
+
+/*This is for items*/
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    justify-content: space-evenly;
+}
+.product-info img{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+.product-info img:hover{
+    opacity: 0.7;
+}
+.product-info{
+    margin: 20px;
+    margin-right: 40px;
+    text-align: center;
+}
+.product-info a{
+    color: black;
+}
+.product-info a:hover{
+    color: blue;
+}
+
+/*THIS IS FOR THE CART>HTML*/
+.products-container{
+    height: 100vh;
+}
+.product-header{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 20px 0 20px;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    
+}
+.product-title{
+    flex-basis: 350px;
+}
+
+/*display product*/
+
+.products{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px;
+
+}
+.col-product{
+    display: flex;
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    justify-content: space-around;
+    border-bottom: 1px solid black;
+}
+.display-product .far, .plus, .minus{
+    cursor: pointer;
+}
+.display-product{
+    flex-basis: 350px;
+}
+.display-product span{
+    position: absolute;
+}
+
+
+
+.basketTotalContainer, .tax-container, .total-container{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+.basketTotalTitle, .taxTitle, .totalTitle{
+    flex-basis: 100px;
+    font-weight: bold;
+}
+.basketTotal, .taxTotal, .totalTotal{
+    flex-basis: 100px;
+}
+.taxTitle, .taxTotal{
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+
+.checkout{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+}
+.btn-checkout{
+    height: 40px;
+    width: 130px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    outline: none;
+}
+.btn-checkout:hover{
+    background-color: black;
+    color: white;
+    animation: pulse;
+    animation-duration: 1s;
+}
+
+
+
+
+/*info bottom*/
+
+footer{
+    background-color: black;
+    margin-top: 30px;
+    color: white;
+}
+.info{
+    display: grid;
+    margin-left: 20px;
+    margin-right: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.info h2{
+    font-weight: bold;
+}
+.location{
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+    margin: 10px 0 10px 0;
+    line-height: 3;
+    border-right: 1px solid white;
+    text-align: center;
+}
+.more{
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    margin: 10px 0 10px 0;
+    line-height: 3;
+    text-align: center;
+}
+.contact{
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+    margin: 25px 0 10px 0;
+    border-bottom: 1px solid white;
+
+}
+.number{
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+    margin: 10px 0 10px 0;
+    text-align: center;
+    padding-top: 50px;
+}
